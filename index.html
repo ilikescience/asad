@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main>
+
+    <section class="bitly">
+        __
+        <div class="helper"><strong>Step 1:</strong> Paste a link to the song here, and generate the short URL</div>
+
+        <div class="bitly--input">
+            <input type="text" class="bitly--longlink" placeholder="Link to song">
+            <button class="bitly--submit">Generate short URL</button>
+        </div>
+
+        <div class="bitly--result" id="bitly--result">
+            <span>Result</span>
+        </div>
+        <div class="copy-button" data-clipboard-target="bitly--result">Copy</div>
+
+    </section>
+
+    <section class="tweet">
+        __
+        <div class="helper"><strong>Step 2:</strong> Fill in the song's name and artist's twitter (the bit.ly link should be filled in for you), and generate the tweet text.</div>
+        <div class="tweet--input"></div>
+        <button class="tweet--generate">Generate Tweet Text</button>
+        <div class="tweet--result"></div>
+        <div class="tweet--length"><span id="tweet--chars">0</span> characters</div>
+        
+    </section>
+
+    <section class="tweetlink">
+        __
+        <div class="helper"><strong>Step 3:</strong> Generate the URL for the tweet link</div>
+
+        <button class="tweetlink--submit">Generate Tweet Link URL</button>
+
+        <div class="tweetlink--result" id="tweetlink--result">
+            <span>Result</span>
+        </div>
+        <div class="copy-button" data-clipboard-target="tweetlink--result">Copy</div>
+        
+    </section>
+
+</main>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="ZeroClipboard.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
