@@ -1,0 +1,112 @@
+::-webkit-input-placeholder {
+    color: $gray-light;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: $gray-light;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: $gray-light;  
+}
+
+:-ms-input-placeholder {  
+    color: $gray-light;  
+}
+
+input, 
+textarea {
+    font-family: $mono;
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 2px solid $gray-light;
+    outline: 0;
+    width: 100%;
+
+    &:disabled {
+        background: $gray-lighter;
+        border-color: $gray-lighter;
+    }
+}
+
+.tweet--result {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: $yellow;
+    border: 2px solid $yellow;
+
+    span {
+        display: inline-block;
+        border-bottom: 2px solid #444;
+    }
+
+    &.disabled {
+        background: $gray-lighter;
+        border-color: $gray-lighter;
+        color: $gray-light;
+
+        span {
+            border-color: $gray-light;
+        }
+
+        &:hover {
+            border-color: $gray-lighter;
+            cursor: default;
+        }
+    }
+
+    &:hover {
+        border: 2px solid darken($yellow, 50%);
+    }
+
+    &:focus {
+        outline: none;
+        border: 2px solid $blue;
+    }
+}
+
+textarea {
+    height: 9rem;
+}
+
+input:focus, 
+textarea:focus {
+    border-color: $blue;
+}
+
+button {
+    width: 20rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: transparent;
+    border: 2px solid $blue;
+    color: $blue;
+    font-family: $mono;
+    font-size: 15px;
+    line-height: 1.5rem;
+
+    &:hover {
+        background-color: $blue;
+        color: white;
+        cursor: pointer;
+    }
+
+    &:disabled {
+        color: $gray-lighter;
+        border-color: $gray-lighter;
+
+        &:hover {
+            background: transparent;
+            color: $gray-lighter;
+            cursor: default;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}

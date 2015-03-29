@@ -1,0 +1,62 @@
+.saved {
+    background: $gray-lighter;
+    padding: 1rem;
+}
+
+.saved--empty {
+    display: block;
+    padding: 1rem;
+    color: $gray-dark;
+    font-style: italic;
+}
+
+.saved--song {
+    background: $white;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.saved--title,
+.saved--artist,
+.saved--url {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.saved--title {
+    font-weight: 700;
+}
+
+.saved--url {
+    color: $gray;
+    font-style: italic;
+}
+
+.saved--delete {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: $gray-light;
+
+    &:hover {
+        cursor: pointer;
+        color: $red;
+    }
+}
+
+.saved--add {
+    background: $white;
+    color: $blue;
+    font-size: $scale-large;
+    padding: 1rem;
+
+    &:hover {
+        background: $blue;
+        color: $white;
+        cursor: pointer;
+    }
+}

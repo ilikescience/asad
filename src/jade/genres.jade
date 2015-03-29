@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title
+        link(rel='stylesheet', href='css/main.css')
+    body
+        main
+            section
+                article.genres--input
+                    textarea(placeholder="Enter a band name...")#input
+                    button.btn#submit Submit
+                article.genres--result
+                    table.genres--table.sortable#genres
+                        thead
+                            tr
+                                td(class="sorttable_alpha")
+                                    | Genre
+                                td(class="sorttable_numeric")
+                                    | Count
+                        tbody#result
+
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+        script(src='js/lib/sortable.js')
+        script(src='js/main.js')

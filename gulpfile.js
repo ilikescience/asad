@@ -17,14 +17,15 @@ function handleError(err) {
 
 //concat, minify js
 gulp.task('scripts', function() {
-    gulp.src([srcPath + 'js/**/*.js', '!js/lib/**/*.js'])
+    gulp.src([srcPath + 'js/**/*.js', '!' + srcPath + 'js/lib/**/*.js'])
     .pipe(concat('main.js'))
     .pipe(uglify())
+    .on('error', handleError)
     .pipe(gulp.dest(destPath + 'js'));
     //move vendor js without minifying
     gulp.src([srcPath + 'js/lib/**.*'], {base: srcPath + 'js'})
     .pipe(gulp.dest(destPath + 'js'));
-})
+});
 
 //concat, minify css
 gulp.task('styles', function() {
@@ -33,8 +34,8 @@ gulp.task('styles', function() {
     .on('error', handleError)
     .pipe(csso())
     .pipe(prefix())
-    .pipe(gulp.dest(destPath + 'css'))
-})
+    .pipe(gulp.dest(destPath + 'css'));
+});
 
 //compile jade files
 gulp.task('templates', function() {
@@ -42,13 +43,13 @@ gulp.task('templates', function() {
     .pipe(jade({
         'basedir': srcPath + 'jade'
     }))
-    .pipe(gulp.dest(destPath))
+    .pipe(gulp.dest(destPath));
 });
 
 gulp.task('watch', function() {
     gulp.watch(srcPath + 'js/**', ['scripts']);
     gulp.watch(srcPath + 'sass/**', ['styles']);
     gulp.watch(srcPath + '**/*.jade', ['templates']);
-})
+});
 
-gulp.task('default', ['scripts', 'styles', 'templates'])
+gulp.task('default', ['scripts', 'styles', 'templates']);

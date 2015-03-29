@@ -1,0 +1,25 @@
+// grays
+$black:             #111;
+$white:             #fff;
+
+$gray-darker:        #464646;
+$gray-dark:          #707070;
+$gray:               #959595;
+$gray-light:         #c2c2c2;
+$gray-lighter:       #f4f4f4;
+
+
+// colors
+$yellow: rgba(241, 196, 15, 0.1);
+$blue: rgba(0, 0, 255, 1);
+$red: rgba(255, 0, 0, 1);
+$green: rgba(0, 255, 0, 1);
+
+// color helper classes
+.color--good {
+    color: $green;
+}
+
+.color--bad {
+    color: $red;
+}

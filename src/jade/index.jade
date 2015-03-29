@@ -3,26 +3,22 @@ html(lang='en')
     head
         meta(charset='utf-8')
         title
-        link(rel='stylesheet', href='css/style.css')
+        link(rel='stylesheet', href='css/main.css')
     body
-        main
-            section.history
-                article
-                    .helper
-                        | Saved Songs:
-                    .saved
-            section.current
-                article
-                    .helper
-                        | Song Info:
-                    .input
-                    .helper
-                        | Tweet Preview:
-                    .tweet--result(contenteditable="true")
-                    .tweet--length
-                        span#tweet--chars 0
-                        |  characters
-                article
-                    button.save Save
+        main#app
+
+            //- section.history
+            //-     article
+            //-         .helper
+            //-             | Saved Songs:
+            //-         .saved
+            //-             .saved--list
+            //-             .saved--add + Add a song
+            //- section.current
+            //-     article
+            //-         .helper
+            //-         .form
+        script(src='http://fb.me/react-0.12.2.js')
+        script(src='http://fb.me/JSXTransformer-0.12.2.js')
         script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-        script(src='js/main.js')
+        script(type='text/jsx' src='js/main.js')

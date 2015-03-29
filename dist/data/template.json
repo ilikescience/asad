@@ -5,22 +5,38 @@
         {
             "fieldname" : "url",
             "type" : "input",
+            "watch" : false,
             "placeholder" : "Link to Song"
         },
         {
             "fieldname" : "songname",
             "type" : "input",
+            "watch" : true,
             "placeholder" : "Song Name"
         },
         {
             "fieldname" : "artist",
             "type" : "input",
+            "watch" : true,
             "placeholder" : "Artist Twitter (or name)"
         },
         {
             "fieldname" : "note",
             "type" : "textarea",
+            "watch" : true,
             "placeholder" : "Curator's note (optional)"
+        },
+        {
+            "fieldname" : "tweetpreview",
+            "type" : "tweet",
+            "watch" : true,
+            "placeholder" : "Tweet Preview"
+        },
+        {
+            "fieldname" : "save",
+            "type" : "button",
+            "watch" : false,
+            "placeholder" : "Save"
         }
     ]
 }

@@ -1,0 +1,15 @@
+// import vendor css
+@import "vendor/reset";
+
+// import global scss
+@import "global/color";
+@import "global/type";
+
+// import components
+@import "components/forms";
+@import "components/tables";
+
+// import individual layouts
+@import "layouts/primary";
+@import "layouts/saved";
+@import "layouts/details";
