@@ -34,13 +34,27 @@ var tweetLink = function() {
     $('.result--tweet').html('http://twitter.com/home/?status=' + URIstatus);
 };
 
+var resetButton = function(){
+    $(".input--submit").removeClass('success').html('Compile &amp; Copy');
+};
+
+var resetFields = function() {
+    $(".input").val("");
+    $(".input--tweet").html('Check out this song: <span class="tweet--field tweet--songname">songname</span> by <span class="tweet--field tweet--artist">artist</span> curated just for me - <span class="tweet--field tweet--url">url</span> Get yours at asongaday.co #asongaday');
+};
+
 $(document).ready( function () {
+
+    if (!localStorage.asadHidden) {
+        $('.greeting').removeClass('hidden');
+    }
 
     var client = new ZeroClipboard( document.getElementById("copy-button") );
 
     client.on( "ready", function( readyEvent ) {
 
       client.on( "copy", function (event) {
+        event.preventDefault();
         compile();
         var clipboard = event.clipboardData;
         var thisVal = $('.result').html();
@@ -55,17 +69,37 @@ $(document).ready( function () {
 
     $('.input--url').on('keyup', function(){
         var thisUrl = $(this).val();
-        console.log('getting shortlink for ' + thisUrl);
         getBitly(thisUrl);
+
+        if ( $('.input--submit').hasClass('success') ) {
+            resetButton();
+        }
+
     });
 
     $('.input').on('keyup', function(){
         updateTweetStatus();
 
+        if ( $('.input--submit').hasClass('success') ) {
+            resetButton();
+        }
+
         var thisTarget = $(this).attr('id');
         var thisVal = $(this).val();
 
         $('.tweet--' + thisTarget).html(thisVal);
+    });
+
+    $('.input--reset').on('click', function(e){
+        e.preventDefault();
+        resetButton();
+        resetFields();
+    });
+
+    $('.greeting--hide').on('click', function(e){
+        e.preventDefault();
+        $('.greeting').addClass('hidden');
+        localStorage.asadHidden = true;
     });
 
 });

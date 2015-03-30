@@ -50,20 +50,45 @@ main {
     color: $red;
 }
 
-.input--submit {
+.input--submit,
+.input--reset {
     display: block;
     padding: 0.5rem;
     text-align: center;
+    text-decoration: none;
+}
+
+.input--reset {
+    border: 2px solid $gray-light;
+    color: $gray-light;
+
+    &:hover {
+        border-color: $gray-lighter;
+        color: $gray-lighter;
+    }
+}
+
+.input--submit {
     color: $blue;
     border: 2px solid $blue;
-    text-decoration: none;
+    margin-bottom: 2rem;
 
     &.success {
         color: $green;
         border-color: $green;
+
+        &.zeroclipboard-is-hover {
+            border-color: lighten($green, 10%);
+            color: lighten($green, 10%);
+        }
     }
 
     &:hover {
+        border-color: lighten($blue, 10%);
+        color: lighten($blue, 10%);
+    }
+
+    &.zeroclipboard-is-hover {
         border-color: lighten($blue, 10%);
         color: lighten($blue, 10%);
     }
@@ -92,4 +117,17 @@ main {
         padding: 0.25rem;
         border: 2px solid $gray-lighter;
     }
+}
+
+.greeting {
+
+    &.hidden {
+        display: none;
+    }
+
+    margin-bottom: 3rem;
+}
+
+.greeting--hide {
+    color: $red;
 }

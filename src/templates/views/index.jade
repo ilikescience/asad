@@ -5,6 +5,18 @@ block title
 
 block content
     main
+        .greeting.hidden
+            strong asad curator tool v2<br/>
+            em release notes<br/>
+            p
+                | I've updated the curator tool! I hope you like it. Here's what's new:
+            ul
+                li Simpler form
+                li Editable tweet text
+                li One-click copy for all fields <a href="http://cl.ly/image/3o2u2m3g0F1l">(check out this demo)</a>
+            p If you have any feedback or requests, send them to me at matthew.h.strom@gmail.com.
+            strong xoxo Matt
+            p <a href="#" class="greeting--hide">&#10005; hide this message forever</a>
         .input--group
             label(for="url").input--label The link to song
             input.input.input--url(type="text", placeholder="https://www.youtube.com/watch?v=e-ORhEE9VVg")#url
@@ -13,13 +25,14 @@ block content
             label(for="artist").input--label The arist's twitter handle or name
             input.input.input--artist(type="text", placeholder="@taylorswift13")#artist
         .input--group
-            span.input--label The tweet's text
+            span.input--label The tweet's text (can be edited)
             .input.input--tweet(contenteditable).
                 Check out this song: <span class="tweet--field tweet--songname">songname</span> by <span class="tweet--field tweet--artist">artist</span> curated just for me - <span class="tweet--field tweet--url">url</span> Get yours at asongaday.co #asongaday
             .tweet--status
                 .tweet--chars -
                 |  characters
         a(href="#")#copy-button.input--submit Compile &amp; Copy
+        a(href="#")#reset-button.input--reset Clear &amp; Reset
 
         .result
             table.result--table
