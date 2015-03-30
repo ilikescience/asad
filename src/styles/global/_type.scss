@@ -6,7 +6,7 @@ $base-line-height: 1.6;
 // typefaces
 $sans:        Helvetica, sans-serif;
 $serif:       Georgia, serif;
-$mono:        Courier, monospace;
+$mono:        'Cousine', Courier, monospace;
 
 .type--sans {
     font-family: $sans;
@@ -31,10 +31,10 @@ $ms-base: 1.2;
     } @else {
         @return 1rem;
     }
-    
+
 }
 
-$scale-huge:        ms(3); 
+$scale-huge:        ms(3);
 $scale-xlarge:      ms(2);
 $scale-large:       ms(1);
 $scale-normal:      ms(0);
@@ -45,11 +45,11 @@ $scale-tiny:        ms(-3);
 
 
 // global type baselines
-body, 
+body,
 html {
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-family: $serif;
+    font-family: $mono;
     color: $black;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;

@@ -1,7 +1,31 @@
 extends /layouts/default
 
 block title
-    | Homepage - Airframe
+    | A Song a Day curator tool
 
 block content
-    h1 Hello World
+    main
+        .input--group
+            label(for="url").input--label The link to song
+            input.input.input--url(type="text", placeholder="https://www.youtube.com/watch?v=e-ORhEE9VVg")#url
+            label(for="title").input--label The song's title
+            input.input.input--songname(type="text", placeholder="Blank Space")#songname
+            label(for="artist").input--label The arist's twitter handle or name
+            input.input.input--artist(type="text", placeholder="@taylorswift13")#artist
+        .input--group
+            span.input--label The tweet's text
+            .input.input--tweet(contenteditable).
+                Check out this song: <span class="tweet--field tweet--songname">songname</span> by <span class="tweet--field tweet--artist">artist</span> curated just for me - <span class="tweet--field tweet--url">url</span> Get yours at asongaday.co #asongaday
+            .tweet--status
+                .tweet--chars -
+                |  characters
+        a(href="#")#copy-button.input--submit Compile &amp; Copy
+
+        .result
+            table.result--table
+                tbody
+                    tr
+                        td.result--url
+                        td.result--songname
+                        td.result--artist
+                        td.result--tweet

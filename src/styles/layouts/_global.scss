@@ -8,3 +8,88 @@ html {
 *:after {
     box-sizing: inherit;
 }
+
+main {
+    @include container;
+    margin: 4rem;
+}
+
+.input--group {
+    margin-bottom: 2rem;
+}
+
+.input--tweet {
+    background: lighten($yellow, 45%);
+    padding: 1rem;
+    border: 2px solid lighten($yellow, 35%);
+    margin: 0.5rem 0;
+
+    &:focus {
+        border-color: $blue;
+        outline: 0;
+    }
+}
+
+.tweet--field {
+    border-bottom: 2px solid $black;
+}
+
+.tweet--status {
+    text-align: right;
+}
+
+.tweet--chars {
+    display: inline-block;
+}
+
+.status--good {
+    color: $green;
+}
+
+.status--bad {
+    color: $red;
+}
+
+.input--submit {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+    color: $blue;
+    border: 2px solid $blue;
+    text-decoration: none;
+
+    &.success {
+        color: $green;
+        border-color: $green;
+    }
+
+    &:hover {
+        border-color: lighten($blue, 10%);
+        color: lighten($blue, 10%);
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.result {
+    display: none;
+}
+
+.result--table {
+    width: 100%;
+    table-layout:fixed;
+
+    th {
+        text-align: left;
+    }
+
+    td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0.25rem;
+        border: 2px solid $gray-lighter;
+    }
+}

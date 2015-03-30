@@ -8,10 +8,15 @@ select,
 button,
 label {
     display: block;
-    font-family: $sans;
+    font-family: $mono;
     font-size: $scale-normal;
     line-height: $base-line-height;
     margin-bottom: 1rem;
+
+    &:focus {
+        border-color: $blue;
+        outline: 0;
+    }
 }
 
 
@@ -19,18 +24,18 @@ label {
    ------------------------- */
 
 label {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 [type="text"],
 [type="email"],
 [type="password"],
 textarea {
-    padding: 0.25rem 0.5rem;
+    padding: 0.75rem 0.5rem 0.5rem;
+    line-height: $base-line-height;
     background: $white;
-    border: 1px solid $gray-light;
-    min-width: 16rem;
-    border-radius: $corner-radius;
+    border: 2px solid $gray-light;
+    width: 100%;
 }
 
 [type="checkbox"],
@@ -53,5 +58,5 @@ select {
     padding: 0.25rem 0.5rem;
     height: 2rem;
     border-radius: $corner-radius;
-    min-width: 16rem;
+    width: 100%;
 }
