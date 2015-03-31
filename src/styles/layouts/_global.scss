@@ -65,6 +65,7 @@ main {
     &:hover {
         border-color: $gray-lighter;
         color: $gray-lighter;
+        cursor: pointer;
     }
 }
 
@@ -86,11 +87,13 @@ main {
     &:hover {
         border-color: lighten($blue, 10%);
         color: lighten($blue, 10%);
+        cursor: pointer;
     }
 
     &.zeroclipboard-is-hover {
         border-color: lighten($blue, 10%);
         color: lighten($blue, 10%);
+        cursor: pointer;
     }
 
     &:focus {

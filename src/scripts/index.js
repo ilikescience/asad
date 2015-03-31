@@ -54,7 +54,7 @@ $(document).ready( function () {
     client.on( "ready", function( readyEvent ) {
 
       client.on( "copy", function (event) {
-        event.preventDefault();
+        console.log('compiling...');
         compile();
         var clipboard = event.clipboardData;
         var thisVal = $('.result').html();
